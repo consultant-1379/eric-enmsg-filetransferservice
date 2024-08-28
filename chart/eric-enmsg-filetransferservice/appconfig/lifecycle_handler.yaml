@@ -1,0 +1,3 @@
+postStart:
+   exec:
+    command: ['/bin/sh', '-c', './etc/init.d/vmsshkeyservice.sh start']

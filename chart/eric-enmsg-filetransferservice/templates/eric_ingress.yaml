@@ -1,0 +1,9 @@
+{{- define "eric-enmsg-filetransferservice.eric_ingress" -}}
+metadata:
+  name: filetransferservice
+spec:
+  virtualServiceIP: {{ .Values.global.vips.svc_CM_vip_ipaddress }}
+{{- end}}
+{{- if and .Values.global.tags.deploy_eric_net_ingress_l4 .Values.global.ip_version (or (eq .Values.global.ip_version "Dual") (eq .Values.global.ip_version "IPv4")) }}
+{{- template "eric-enm-common-helmchart-library.eric_ingress" (list . "eric-enmsg-filetransferservice.eric_ingress") -}}
+{{- end }}

@@ -1,0 +1,10 @@
+apiVersion: v2
+appVersion: "1.0"
+description: A Helm chart for Filetransferservice SG
+name: eric-enmsg-filetransferservice
+version: 1.0.0-9
+dependencies:
+- condition: eric-enm-common-helmchart-library.enabled
+  name: eric-enm-common-helmchart-library
+  repository: https://arm.epk.ericsson.se/artifactory/proj-enm-helm/
+  version: 1.55.0-5

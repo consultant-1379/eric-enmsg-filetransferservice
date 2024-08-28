@@ -1,0 +1,9 @@
+NAME=eric-enmsg-filetransferservice
+DEP=true
+SVC=filetransferservice
+REQUESTS=true
+REQUESTS_LIST=3072Mi
+LIMITS=true
+LIMITS_LIST=8192Mi
+WAIT=true
+WAIT_LIST=gossiprouter-cache,gossiprouter-eap7,jms01,postgres,sps

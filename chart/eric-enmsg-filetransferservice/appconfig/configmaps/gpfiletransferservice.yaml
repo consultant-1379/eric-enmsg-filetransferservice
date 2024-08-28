@@ -1,0 +1,15 @@
+global.properties: |
+  COM_INF_LDAP_ADMIN_ACCESS={{ .Values.global.enmProperties.COM_INF_LDAP_ADMIN_ACCESS }}
+  COM_INF_LDAP_ROOT_SUFFIX={{.Values.global.enmProperties.COM_INF_LDAP_ROOT_SUFFIX }}
+  COM_INF_LDAP_ADMIN_CN={{ .Values.global.enmProperties.COM_INF_LDAP_ADMIN_CN }}
+  COM_INF_LDAP_PORT={{ .Values.global.enmProperties.COM_INF_LDAP_PORT }}
+  LDAP_ADMIN_CN={{ .Values.global.enmProperties.LDAP_ADMIN_CN }}
+  LDAP_ADMIN_PASSWORD={{ .Values.global.enmProperties.LDAP_ADMIN_PASSWORD }}
+  DDC_ON_CLOUD=TRUE
+  preserve_vm_host_keys=true
+  svc_CM_vip_ipaddress={{ .Values.global.vips.svc_CM_vip_ipaddress}}
+  svc_CM_vip_ipv6address={{ .Values.global.vips.svc_CM_vip_ipv6address}}
+  svc_FM_vip_ipv6address={{ .Values.global.vips.svc_FM_vip_ipv6address}}
+  svc_PM_vip_ipv6address={{ .Values.global.vips.svc_PM_vip_ipv6address}}
+  smrs_sftp_port_partition_enable={{ .Values.global.enmProperties.smrs_sftp_port_partition_enable}}
+  smrs_sftp_securePort={{ .Values.global.enmProperties.smrs_sftp_securePort}}

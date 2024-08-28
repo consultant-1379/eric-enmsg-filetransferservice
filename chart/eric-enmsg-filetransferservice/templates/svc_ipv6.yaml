@@ -1,0 +1,3 @@
+{{- if and .Values.global.ip_version (or (eq .Values.global.ip_version "Dual") (eq .Values.global.ip_version "IPv6_EXT")) -}}
+{{- template "eric-enm-common-helmchart-library.service-ipv6" (list . "eric-enmsg-filetransferservice.service-ipv6") -}}
+{{- end -}}

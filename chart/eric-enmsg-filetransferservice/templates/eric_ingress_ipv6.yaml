@@ -1,0 +1,9 @@
+{{- define "eric-enmsg-filetransferservice.eric_ingress-ipv6" -}}
+metadata:
+  name: filetransferservice-ipv6
+spec:
+  virtualServiceIP: {{ .Values.global.vips.svc_CM_vip_ipv6address }}
+{{- end}}
+{{- if and .Values.global.tags.deploy_eric_net_ingress_l4 .Values.global.ip_version (or (eq .Values.global.ip_version "Dual") (eq .Values.global.ip_version "IPv6_EXT")) }}
+{{- template "eric-enm-common-helmchart-library.eric_ingress-ipv6" (list . "eric-enmsg-filetransferservice.eric_ingress-ipv6") -}}
+{{- end }}

@@ -1,0 +1,7 @@
+{{- template "eric-enm-common-helmchart-library.deployment" (list . "eric-enmsg.deployment") -}}
+{{- define "eric-enmsg.deployment" -}}
+spec:
+  template:
+    spec:
+      terminationGracePeriodSeconds: 60
+{{- end -}}

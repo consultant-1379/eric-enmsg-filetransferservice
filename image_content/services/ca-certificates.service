@@ -1,0 +1,13 @@
+[Unit]
+Description=Update system wide CA certificates
+Wants=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/update-ca-certificates
+PassEnvironment=SERVICE_NAME
+PassEnvironment=TLS_MOUNT_PATH
+
+[Install]
+WantedBy=default.target
+

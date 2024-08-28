@@ -1,0 +1,62 @@
+- name: cgroups-host-volume
+  hostPath:
+    # directory location on host
+    path: /sys/fs/cgroup
+    # this field is optional
+    type: Directory
+- name: run-volume
+  emptyDir:
+    medium: Memory
+    sizeLimit: 100Mi
+- name: tmp-volume
+  emptyDir:
+    medium: Memory
+    sizeLimit: 100Mi
+- name: gp
+  configMap:
+    name: gpfiletransferservice
+- name: data
+  persistentVolumeClaim:
+    claimName: data
+- name: smrs
+  persistentVolumeClaim:
+    claimName: smrs
+- name: home
+  persistentVolumeClaim:
+    claimName: home-shared
+- name: mdt
+  persistentVolumeClaim:
+    claimName: mdt
+- name: custom
+  persistentVolumeClaim:
+    claimName: custom
+- name: dumps
+  persistentVolumeClaim:
+    claimName: hcdumps
+- name: batch
+  persistentVolumeClaim:
+    claimName: batch
+- name: norollback
+  persistentVolumeClaim:
+    claimName: norollback
+- name: configmgt
+  persistentVolumeClaim:
+    claimName: configmgt
+- name: upgind
+  persistentVolumeClaim:
+    claimName: upgind
+- name: pmic1
+  persistentVolumeClaim:
+    claimName: pm1
+- name: pmic2
+  persistentVolumeClaim:
+    claimName: pm2
+- name: pmlinks
+  persistentVolumeClaim:
+    claimName: pmlinks
+- name: netlog
+  persistentVolumeClaim:
+    claimName: netlog
+- name: pmul
+  persistentVolumeClaim:
+    claimName: pmul

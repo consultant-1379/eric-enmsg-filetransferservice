@@ -1,0 +1,12 @@
+- name: certreq-secret-1
+  secret:
+    secretName: "{{ .Values.service.name }}-certreq-secret-1"
+- name: tls-secret-1
+  secret:
+    secretName: "{{ .Values.service.name }}-tls-secret-1"
+- name: tls-secret-2
+  secret:
+    secretName: "{{ .Values.service.name }}-tls-secret-2"
+- name: tls-secret-3
+  secret:
+    secretName: "{{ .Values.service.name }}-tls-secret-3"

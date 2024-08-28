@@ -1,0 +1,12 @@
+- name: sshd
+  port: 22
+  targetPort: 22
+- name: ftpes
+  port: 9920
+  targetPort: 9920
+- name: ftpes2
+  port: 9921
+  targetPort: 9921
+- name: ftp
+  port: 21
+  targetPort: 21

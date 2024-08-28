@@ -1,0 +1,20 @@
+[Unit]
+Description=ENM Certificates
+# RHEL 7
+#After=remote-fs.target network-online.target default.target
+After=remote-fs.target network-online.target multi-user.target
+Conflicts=shutdown.target
+
+[Service]
+# RHEL 7
+Type=forking
+#Type=oneshot
+RemainAfterExit=yes
+PassEnvironment=SERVICE_NAME
+PassEnvironment=TLS_MOUNT_PATH
+ExecStart=/ericsson/sg/filetransfer_post_startup.sh
+
+[Install]
+# RHEL 7
+#WantedBy=default.target
+WantedBy=multi-user.target
